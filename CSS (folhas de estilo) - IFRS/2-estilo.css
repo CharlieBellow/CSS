@@ -1,0 +1,26 @@
+/*body{
+	color: red;
+	font-family: Verdana, Tahoma, Times; /* sempre colocar mais de uma font para o site não desconfigurar no PC das pessoas */
+/*	font-size: 50px;
+	font-weight: bold; /* deixa o texto em negrito */
+/*}
+
+#id1 {
+		font-size: 24px;
+	} /*para alterar o estilo da fonte do ID é necessário colocar fora do body, identificar qual é o ID(declarado na página HTML) que quer formatar e usar a # antes */
+/*
+.class1 {
+	font-size: 10px;
+} /*para alterar o estilo da fonte é necessário colocar fora do body, identificar qual é a class(declarada na página HTML) que quer formatar e usar o . antes */
+p {
+	font-size: 12px;
+}
+.classe1 {
+	font-style: italic;
+}
+#id2 {
+	font-family: Arial;
+}
+p.classe1 {
+	color: red;
+}

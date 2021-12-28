@@ -1,0 +1,204 @@
+/*# Pages Layouts
+
+  - Tables
+  - floats e clear: ele mentos flutuantes, clear para parar os arquivos flutuantes
+  - frameworks e Grid Systems: grades na tela para separar e colocar os elementos
+  - flexbox
+  - grid: usado atualmente
+
+  # Posicionamentos
+  Controlar onde, na página, o elemento irá ficar, alterando o fluxo normal dos elementos.
+
+    - Name: position
+    - Value: static | relative |absolute|fixed
+    * static (padrão) os elementos ficam um abaixo do outro
+    * relative: pra quando eu quiser mexer só um elementos e deixar os outros quietos
+    - Aqui temos 5 propriedades:    
+    top
+    right
+    bottom
+    left
+    z-index
+
+
+    * absolute:
+    ele cria uma camada acima, então o quadrado fica por cima dos outros, por isso o vermelho muda de posição e o os outros dois quadrados vão pra cima, pois pegam o lugar anterior do vermelho. então ele se torna relativo à página inteira
+
+    - Aqui temos 5 propriedades: top 
+    right 
+    bottom 
+    left 
+    z-index
+
+
+
+    * fixed:
+    fixa os elementos em determinado lugar, quando o mouse faz um scroll o elemento marcado como fixed fica e só os outros se movem
+
+OBS: como tudo no CSS esses atributos respeitam a ordem da cascata
+  */
+
+/*.box {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+  }
+
+main {
+  margin-top: 200px;
+  position: relative;
+}
+.box1 {
+  background-color: red;
+  position: fixed;
+  left: 0px;
+  top: 100px;
+  }
+
+.box2 {
+  background-color: green;
+  
+}
+
+.box3 {
+  background-color: blue;
+  
+}*/
+
+/*
+# Element Stacking
+
+Empilhamento de elementos. Funciona como o trazer para frente do canva
+
+z-index
+
+*/
+
+/*.box {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+.box1 {
+  background-color: red;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: 3; /*trazer para frente*/
+/*}
+
+.box2 {
+  background-color: green;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 4;*/ /*colocando uma camada maior do que a dos outros, eu consigo sobrescrever o elemento em cima dos outros*/
+/*}
+
+.box3 {
+  background-color: blue;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}*/
+
+/*# Flexbox
+
+    * Nos permite posicionar os elementos dentro da caixa. 
+    * Controle em uma dimensão (horizontal ou vertical) * Alinhamento, direcionamento, ordernar e tamanhos 
+    
+    div.parent {
+      display: flex;
+    } 
+    
+/*    ## flex-direction
+      Qual a direção do flex: horizontal ou vertical
+      * row | column 
+      
+      ## alinhamento
+      *justfy-content
+      * aling-items
+      
+      exemplos: */
+
+    /*  body {
+          height: 100vh;
+        margin: 0;
+        
+        display: flex;
+        
+        align-items: center;
+      }
+      .container {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        /*justify-content: space-between;*/ /*cria um espeço proporcional entre os elementos*/
+      /*}
+      .box {
+        width: 50px;
+        height: 50px;
+      }
+
+      .blue {
+        background-color: red;
+      }
+
+      .red {
+        background-color: green;
+      }
+
+      .green {
+        background-color: blue;
+      }*/
+
+ /*     # Grid
+
+      * Posicionamento dos elementos dentro da caixa 
+      * Posicionamento horizontal e vertical ao mesmo tempo 
+      * Pode ser flexível ou fixo 
+      * Cria espaços para os elementos filhos habitarem
+
+      obs: o grid é aplicado ao pai, pois ele muda  comportamento dos filhos..
+
+      */
+
+body {
+  margin: 0;
+  height: 100vh;
+
+  display: grid;
+  grid-template-areas: 
+  "header header"
+  "main aside"  
+  "footer footer"; 
+  /*cada aspas representa uma linha do layout*/
+  /*coloca 2 vezes pra indicar que ele vai ocupar 2 colunas*/
+  grid-template-rows: 30px 1fr 40px; /*uma fração pra dizer que é flexível*/
+  grid-template-columns: 1fr 80px;
+}
+
+header {
+  grid-area: header;
+  background-color: green;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+}
+main {
+  grid-area: main;
+  background-color: red;
+}
+
+aside {
+  grid-area: aside;
+  background-color: blue;
+}
+
+footer {
+  grid-area: footer;
+  background-color: gray;
+}

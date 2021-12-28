@@ -1,0 +1,12 @@
+h1 {
+    color: red;
+    /* lembrando que assim o preview do VS code não funciona*/
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    /*adicionando a font montsserrat do fonts.google.com */
+}
+
+strong {
+    color: blue;
+    
+}
