@@ -1,0 +1,14 @@
+/*
+Direção dos itens 
+
+- Flex é uma dimensão (horizontal ou vertical) 
+- podemos mudar a direção com `flex-direction`
+- valores: (row | row-reverse | column | column-reverse)
+*/
+
+.container { 
+  display: flex;
+  flex-direction: column-reverse;
+  height: 80vh;
+  /*reverte o eixo e coloca os elementos pro lado contrário (o start se torna end e vice versa)*/
+}

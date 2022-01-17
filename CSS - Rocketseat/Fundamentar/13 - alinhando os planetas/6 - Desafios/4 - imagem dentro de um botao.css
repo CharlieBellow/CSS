@@ -1,0 +1,31 @@
+/* Imagem dentro de um botão 
+crie um botão que contenha um ícone (img) e um texto
+coloque um espaço de .4rem entre os elementos.
+*/
+
+
+/* como eu fiz: */
+/*button {
+  display: flex;
+  gap: .4rem;
+  align-items: center;
+  background-color: lightblue;
+  border: 0px;
+  padding: 5px;
+  
+}*/
+
+
+/* como foi ensinado: */
+
+button {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  line-height: 0; /*tira o espaço entre o texto*/
+}
+
+button img {
+  width: 2rem;
+  height: 2rem;
+}

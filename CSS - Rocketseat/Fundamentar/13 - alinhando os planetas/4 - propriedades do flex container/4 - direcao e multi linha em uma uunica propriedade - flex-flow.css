@@ -1,0 +1,26 @@
+/*# flex-flow
+
+- Shorthand
+- Aceita duas propriedades ao mesmo tempo:
+    - flex-direction || flex-wrap
+
+
+*/
+.box { 
+  display: flex;
+  /*flex-wrap: wrap;
+  flex-direction: column;*/
+  /* o flex-flow substitui esses dois de cima */
+  /*flex-flow: column wrap;*/
+  flex-flow: row wrap;
+
+  border: 1px dashed red;
+}
+
+.box div {
+  border: 1px solid;
+  width: 80px;
+  
+}
+
+

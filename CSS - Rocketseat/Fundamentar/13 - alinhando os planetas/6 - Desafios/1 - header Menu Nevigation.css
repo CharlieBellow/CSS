@@ -1,0 +1,110 @@
+/*header menu navigation
+  
+  Crie o <header> de um site que contenha uma logo e um menu.
+
+  - um elemento deverá ficar ao lado do outro.
+  - A logo que ficará na extrema esquerda e o menu ficará na extrema direita.
+  - os itens do menu ficarão um ao lado do outro, com um espaço de .8rem entre eles.
+  - o último elemento do menu será um botão de contato e você poderá utilizar o seletor :last-child para estilizar.
+  
+  */
+
+  /*minha solução:*/
+
+main {
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+
+  /*border: 1px dashed red;*/
+
+  display: flex;
+  flex-direction: space-between;
+  
+  weight: 10px;
+  
+  flex-flow: row wrap;
+  gap: 0.8rem;
+  margin: 10px;
+}
+
+main div:nth-child(1) {
+  flex: 3;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px;
+  box-sizing: border-box;
+  margin: 3px;
+  
+}
+
+
+main div:nth-child(2),
+main div:nth-child(3),
+main div:nth-child(4),
+main div:nth-child(5) {
+  flex: 0;
+  align-items: flex-end;
+  flex-basis: 3px;
+  
+  padding-top: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+  justify-content: flex-end;
+
+}
+
+
+main div {
+  /*border: 1px solid*/
+}
+
+
+button:last-child {
+  background: blueviolet;
+  border-radius: 6%;
+  font-size: 15px;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border: 0;
+  margin: 5px;
+}
+
+
+/*como ele ensinou: */
+
+/** {
+  margin: 0;
+}
+
+header {
+  padding: 4rem;
+  background-color: lightgray;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; 
+  /* coloca cada um para um canto */
+  /*align-items: center;*/
+/*}*/
+
+/*ul {*/
+  /*display: flex;*/
+  /*list-style: none; tira as bolinhas dos itens da lista*/
+  /*gap: .8rem;*/
+  /*align-items: center; alinha no eixo principal (horizontal)*/
+
+/*}*/
+
+/*ul li:last-child {*/
+  /*background: black;*/
+  /*color: white;*/
+  /*padding: .8rem;*/
+/*}*/

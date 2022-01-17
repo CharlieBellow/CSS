@@ -1,0 +1,45 @@
+/*  9 fotos 3 colunas
+
+crie uma galeria de fotos onde teremos 3 colunas e 9 fotos.deixe um espaço de .8rem entre os elementos da galeria.
+*/
+
+/*lista ou tabela?*/
+
+/* lista */
+
+/*ul, li {
+  list-style: none;
+  gap: 0.8rem;
+  flex-flow: row wrap;
+  flex-basis: 25%;
+  border: solid 1px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}*/
+
+
+/* tabela */
+
+/*tr, td {
+  gap: 0.8rem;
+  border: 1px solid;
+  padding: 0.8rem;
+  
+
+}*/
+
+
+/* como ele fez: */
+
+img {
+  width: 30%;
+  height: auto;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap; /* quebrar a linha */
+  justify-content: center;
+  gap: 0.8rem;
+}

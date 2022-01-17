@@ -1,0 +1,38 @@
+/* # alterando o tamanho de multiplos itens
+*/
+.page {
+  border: 2px solid;
+  min-height:100vh;
+
+  display: flex;
+}
+
+aside{
+  background: lightgreen;
+  flex: 1 /* aqui o aside tá pegando uma parte do eixo horizontal */
+}
+
+main {
+  background: lightblue;
+  flex: 2; /* aqui o main ta tomando duas partes do eixo horizontal */
+
+  display: flex;
+  flex-direction: column;
+}
+
+main section:nth-child(1) {
+  background: lightgoldenrodyellow;
+  flex: 1;
+}
+
+main section:nth-child(2) {
+  background: lightsalmon;
+  flex: 0 300px; 
+  /* coloca o content 2 com altura fixa de 800px e desabilita o flex atribuindo zero primeiro.
+  E quando desabilita o flex, as outras regras tem mais força que o flex */
+}
+
+main section:nth-child(3) {
+  background: lightpink;
+  flex: 0 0 120px; /* o basis (120px) é mais forte */
+}

@@ -1,0 +1,30 @@
+/*  Propriedades para os itens de 
+- flex-basis: mudar o tamanho do item - flex-grow: se adapta, crescent
+- flex-shrink: encurtar ou comprimir 
+- flex: shorthand pra os 3 de cima 
+- order: ordenar */
+
+
+/* Flex-shrink 
+
+- O encolhimento do item dentro do container
+
+*/
+
+.box {
+  display: flex;
+  /*flex-direction: column;*/
+  border: 1px dashed red;
+  width: 180px;
+  /*height: 180px;*/
+}
+
+.box div {
+  flex-basis: 80px;
+  border: 1px solid
+}
+
+.box div:nth-child(3),
+.box div:nth-child(2) {
+  flex-shrink: 0.2;
+}

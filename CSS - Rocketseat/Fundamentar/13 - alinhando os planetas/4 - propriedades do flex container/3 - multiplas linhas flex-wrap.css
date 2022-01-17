@@ -1,0 +1,22 @@
+/* # Flex wrap 
+
+- podemos usar multi linhas. 
+- cada nova linha,
+ um novo flex container
+
+ ( mais de um eixo principal)
+ */
+
+.box { 
+  display: flex;
+  border: 1px dashed red;
+  flex-wrap: wrap; /* cria novas linhas só se for necessário.. e se não tiver espaço ele empurra os objetos para baixo*/
+  justify-content: center;
+  /* a última linha foi pra baixo e o justify-content centralizou as linhas */
+}
+
+.box div {
+  border: 1px solid;
+
+  width: 80px
+}

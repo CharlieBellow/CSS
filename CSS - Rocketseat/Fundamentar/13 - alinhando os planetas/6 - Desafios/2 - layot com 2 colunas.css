@@ -1,0 +1,75 @@
+/* Layout com 2 colunas:last-child
+
+Crie um layout com 2 colunas, uma ao lado da outra.
+A coluna da esquerda deverá ter 25% de tamanho e a coluna da direita deverá ocupar too o espaço que sobra.
+faça uma separação de 1rem entre os elementos.
+
+*/
+
+
+/*como eu fiz:*/
+
+/*div {
+  display: flex;
+  gap: 1rem; da um espaço entre os elementos
+  height: 90vh;
+}
+
+aside {
+  background: lightgreen;
+  flex: 1
+    aqui o aside tá pegando uma parte do eixo horizontal
+}
+
+main {
+  background: lightblue;
+  flex: 3;
+  aqui o main ta tomando duas partes do eixo horizontal
+
+  display: flex;
+  flex-direction: column;
+}*/
+
+/*como eu imaginei que ele iria fazer: 
+o que eu ganho colocando em lista? */
+
+/*ul{
+  list-style: none;
+  display: flex;
+  height: 90vh;
+  gap: 1rem;
+}
+
+li {
+ background: lightblue;
+ color: lightblue;
+ 
+}
+
+li:nth-child(1) {
+  width: 25%;
+}
+
+li:nth-child(2){
+  flex: 1;
+}*/
+
+/*como ele ensinou:*/
+
+.container {
+  display: flex;
+  gap: 1rem;
+}
+
+aside, main {
+  border: 1px solid;
+  height: 95vh;
+}
+
+aside {
+  flex-basis: 25%; /* deixa a coluna esquerda em 25% */
+}
+
+main {
+  flex: 1;
+}

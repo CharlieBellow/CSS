@@ -1,0 +1,21 @@
+/*
+# 1 - Propriedades para os itens de
+
+- flex-basis: mudar o tamanho do item
+- flex-grow:  se adapta, cresce
+- flex-shrink: encurtar ou comprimir
+- flex: shorthand pra os 3 de cima
+- order: ordenar
+
+*/
+
+.box {
+  display: flex;
+
+  border: 1px dashed red;
+}
+
+.box div {
+  border: 1px solid;
+  flex-basis: auto;
+}

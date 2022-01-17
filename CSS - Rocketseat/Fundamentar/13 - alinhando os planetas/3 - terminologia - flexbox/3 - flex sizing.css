@@ -1,0 +1,11 @@
+.container { 
+  display: flex;
+  border: 1px solid red;
+  height: 80vh;
+}
+
+.item { 
+  background-color: grey;
+  border: 1px solid;
+  flex: 1; /* muda a forma como o preenchimento do container */
+}

@@ -1,0 +1,35 @@
+/*  Propriedades para os itens de 
+- flex-basis: mudar o tamanho do item - flex-grow: se adapta, crescent
+- flex-shrink: encurtar ou comprimir 
+- flex: shorthand pra os 3 de cima 
+- order: ordenar */ 
+
+
+/* Flex-grow 
+
+- O crescimentos do item dentro do container em relação aos espaços vazios
+
+*/
+
+.box {
+  display: flex;
+  /*flex-direction: column;*/
+
+  border: 1px dashed red;
+  height: 150px;
+}
+
+.box div {
+  border: 1px solid;
+  flex-basis: auto;
+}
+
+.box div:nth-child(2),
+.box div:nth-child(3) {
+  flex-grow: 1;
+}
+/* aqui eu tô fazendo com que o A pegue 2 frações do espaço vazio.. e em cima eu tô dizendo que os item 2 e 3 (B e C) v]ao pegar apenas uma.. e consequentemente, o D fica do jeito que já estava.. */
+
+.box div:nth-child(1) {
+  flex-grow: 2;
+}

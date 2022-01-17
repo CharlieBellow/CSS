@@ -1,0 +1,29 @@
+/* # ordenando os itens 
+
+obs.: serve como algo visual, mas pra acessibilidade não é interessante*/
+
+
+.box {
+ border: 1px dashed red; 
+ display: flex;
+}
+
+.box div {
+  border: 1px solid;
+}
+
+.box div:nth-child(1) {
+  order: 1;
+}
+
+.box div:nth-child(2) {
+  order: 0;
+}
+
+.box div:nth-child(3) {
+  order: 0;
+}
+
+.box div:nth-child(4) {
+  order: -1;
+}

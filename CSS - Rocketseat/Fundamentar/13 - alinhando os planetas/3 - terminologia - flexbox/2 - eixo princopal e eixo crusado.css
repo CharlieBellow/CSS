@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  /*transforma o que pertence a classe container em uma caixa flexível */
+  flex-direction: column;
+  /* 
+  muda a direção do eixo principal e coloca em form de coluna*/
+  justify-content: flex-end;/* joga o conteúdo para o fim do eixo, nesse caso, para a esquerda pois o eixo é o horizontal */
+  height:100vh;
+}

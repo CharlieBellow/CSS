@@ -1,0 +1,30 @@
+/*  Propriedades para os itens de 
+- flex-basis: mudar o tamanho do item - flex-grow: se adapta, crescent
+- flex-shrink: encurtar ou comprimir 
+- flex: shorthand pra os 3 de cima 
+- order: ordenar */
+
+
+/* Flex 
+
+  - (shorthand)
+  - flex-grow flex-shrink flex-basis
+  - podem ter 1, 2 ou 3 valores
+
+*/
+
+.box {
+  display: flex;
+  /*flex-direction: column;*/
+  border: 1px dashed red;
+  /*width: 180px;*/
+  
+}
+
+.box div {
+  border: 1px solid;
+  flex: 0 1 40px;
+  /*  primeiro valor é do grou depois shrink e depois basis se colocar o segunda valor como unidade de medida, esse segundo valor vai ser entendido como flex-basis */
+}
+
+

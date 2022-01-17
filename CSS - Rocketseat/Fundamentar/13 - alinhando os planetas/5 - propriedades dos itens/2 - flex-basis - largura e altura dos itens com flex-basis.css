@@ -1,0 +1,28 @@
+/*# 1 - Propriedades para os itens 
+
+- flex-basis: mudar o tamanho do item - flex-grow: se adapta, cresce 
+- flex-shrink: encurtar ou comprimir 
+- flex: shorthand pra os 3 de cima 
+- order: ordenar */ 
+
+/* Flex Basis */
+
+.box {
+  display: flex;
+
+  border: 1px dashed red;
+}
+
+.box div {
+  border: 1px solid;
+  /*width: 25px*/
+  flex-basis: auto; /* se ele estiver automático posso mudar a altura e largura.. se não estiver, ele fica com todas as possibilidades de mudar as caixas */
+}
+
+.box div:nth-child(1) {
+  width: 25px;
+  /*ou
+  
+  flex-basis:25px;
+  */
+}
