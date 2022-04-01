@@ -1,0 +1,225 @@
+
+/* flexbox
+
+- onde usar cada propriedade?
+
+Seguindo a documentação temos: 
+	* container (elemento pai): 
+display: flex, 
+flex-direction 
+justify-content 
+flex-wrap 
+flex-flow 
+align-items 
+align-content 
+
+* flex item (elemento filho): 
+
+order 
+flex-grow 
+flex-shrink 
+flex-basis 
+flex 
+align-self
+
+*/
+
+
+
+.cabecalhoPrincipal .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.cabecalhoPrincipal-nav {
+	display: flex;
+}
+
+.rodapePrincipal-patrocinadores .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 70%;
+	margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm {
+	width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+	display: flex;
+}
+
+.rodapePrincipal-navMap-list {
+	display: flex;
+	/* se precisar usa o flex-wrap: wrap - pra ele quebrar a linha quando acabar o espaço definido pra a caixa então quando não couber mais no elemento pai, quebra pra próxima coluna pra juntar as duas: flex-flow: column wrap */
+	/*flex-direction: column;
+	flex-wrap: wrap;*/
+	flex-flow: column wrap;
+	height: 250px;
+}
+
+.conteudoPrincipal-cursos {
+	display: flex;
+	/* quebre para a próxima linha caso não haja tamanho disponível */
+	flex-wrap: wrap;
+}
+
+/* quando vai fazer grid: várias caixas uma ao lado da outra, o flex não consegue lidar com as últimas caixas se tiver uma espaço grande sobrando, nesse caso, usa o grid  */
+
+.conteudoPrincipal-cursos-link {
+	width: 23%;
+	margin: 1%;
+}
+
+/* pegando elementos múltiplos de 4 */
+.conteudoPrincipal-cursos-link:nth-child(4n) {
+	margin-right: 0;
+}
+
+/* pegando os elementos que vem logo depois dos múltiplos de 4 (ele também pega o 1º elemento pq começa com zero e 4*0 é zero, quando soma mais um fica 1 e depois seque para os ímpares 5, 9 ....) */
+.conteudoPrincipal-cursos-link:nth-child(4n+1) {
+	margin-left: 0;
+}
+
+/* clocando os filhos dessa classe um do lado da outra */
+.videoSobre .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.videoSobre-sobre {
+	text-align: center;
+
+	/* como tem flex direction: column, ele vai alinhar os itens na horizontal. se o flex estivesse como flex row, ele alinharia tudo na vertical(quando digo alinhar é deixar os elementos com a mesma largura/altura por padrão sem precisar definir manualmente) */
+	display: flex;
+	flex-direction: column;
+	/* flex-grow (faz crescer os elementos) faz com que o flex item (item que a gente ta mexendo) pegue o tamanho que está sobrando*/
+	flex-grow: 10;
+}
+
+.videoSobre-sobre-list {
+	/* a mesma coisa aqui, o espaço que sobrou vai pra lista. se eu colocar 3, fica 2 pra o elemento que estou pegando e 1 pra os outros elementos */
+	flex-grow: 1;
+}
+
+.videoSobre-video {
+	flex-grow: 1;
+	/* o flex-shrink: 2; diminui os elementos para que caibam na tela. faz o contrário do flex-grow. se eu colocar 0 ele não vai diminuir
+	o valor que eu passo diz quantas vezes o elemento vai diminuir. nesse exemplo vai diminuir duas vezes mais
+	  */
+	/*flex-shrink: 2;*/
+}
+
+/*parte mobile*/
+
+/* se você pensar que no desktop temos mais espaço horizontal, então usamos muito o flex no padrão row pra poder deixar os itens um ao lado do outro e aproveitar o espaço disponível. 
+
+já no mobile o espaço horizontal é reduzido e cada elemento precisa ficar um abaixo do outro. e pra isso usamos o flex-direction: column. com isso os eixos vertical e horizontal se invertem. então precisams resetar o align-itens colocando inital e se quisermos o texto centralizado usamos o tex-align: center
+*/
+
+/* é legal colocar o tamanho mobile até 768 e depois disso já é desktop */
+@media(max-width: 768px) {
+	.cabecalhoPrincipal-nav {
+		flex-direction: column;
+	}
+
+	.cabecalhoPrincipal .container {
+		flex-direction: column;
+		/* quando coloca align-items no flex junto com flex-direction: column, os eixos vertical e horizontal mudam, então tem que resetar o algn-itens qd tiver o column junto , pra isso usa o algn-itens: initial*/
+		align-items: initial;
+		text-align: center;
+	}
+
+	.conteudoPrincipal-cursos {
+		flex-direction: column;
+	}
+
+	.conteudoPrincipal-cursos-link {
+		width: 100%;
+	}
+
+	/* para fazer com que os elementos fiquem um abaixo do outro, é só deixar a altura automática. usa o height: auto*/
+	.rodapePrincipal-navMap-list {
+		height: auto;
+	}
+
+	.rodapePrincipal-patrocinadores .container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.rodapePrincipal-patrocinadores-list {
+		margin: 0;
+		width: 100%;
+	}
+
+	.rodapePrincipal-contatoForm {
+		width: 100%;
+	}
+
+	.rodapePrincipal-contatoForm-fieldset {
+		justify-content: center;
+	}
+
+	/* mudando a ordem do elemento. por padrão é 0 */
+	.cabecalhoPrincipal-nav-link-app {
+		order: -1;
+	}
+
+	.videoSobre .container {
+		flex-direction: column;
+	}
+
+	.videoSobre-video {
+		/* o margin: auto, serve pra alinhar no centro itens que não tem texto pra usar o text-align */
+		margin: 0 auto;
+	}
+}
+
+
+
+.flexItem {
+	/* distribui o espeça entre os elementos */
+	flex-grow: 1;
+
+}
+
+.primeiro {
+	/* colocando 2 espaços para um elemento e deixando os outros com o resto */
+	flex-grow: 2;
+
+
+	/* já o flex-shrink: 1; faz o contrário do flex-grow que é diminuir um elemento mais que os outros; */
+	/*flex-shrink: 1;*/
+
+	/*  se colocar 
+  flex-shrink: 0; ele diz que ninguém vai diminuir de tamanho
+  
+  
+  */
+}
+
+
+/* para juntar o flex grow com o flex shrink usa:
+flex: 1(grow) 1(shrink) 
+
+o flex-basis: 25% tem mais prioridade em cima do width então pode ser útil em alguns casos. e pode ser colocado como terceiro argumento do flex
+
+flex: 1(flex-grow) 1(flex-shrink) 25%(flex-basis)
+
+A propriedade flex-basis serve para definir uma largura ou altura para o flex item. Se o flex container tiver com flex-direction: column,
+o flex-basis no flex item servirá para definir uma height. Caso o flex-direction: row,
+ele funciona como um width.
+
+
+Nos jogos você encontrará uma outra propriedade chamada align-self. Essa propriedade é aplicada ao flex item e faz com que ele se alinhe individualmente. Lembra da propriedade align-items que colocávamos no flex container? O align-self faz a mesma coisa,
+só que alinha um único elemento e é colocada no flex item.
+*/

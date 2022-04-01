@@ -1,0 +1,148 @@
+/*.box {
+  height: 50px;
+  width: 50px;
+  background-color: green;
+  color: white;
+}
+
+.grid {
+  display:flex;
+  flex-wrap: wrap;
+
+}*/
+
+/* exemplo de grid com display: flex flexbox */
+/*.grid {
+  display: flex;
+  flex-wrap: wrap;
+  /*background-color: gray;*/
+/*}*/
+
+/* note que aqui é necessário fazer conta.
+
+Nesse caso teriamos 3 .course por linha,
+cada um com width: 31.3% e margin: 1%. 
+
+De width isso totaliza: 31.3 * 3=93.9%. 
+
+De margin isso totaliza: 6% (1% à esquerda e 1% à direita de cada elemento). 
+
+No total temos: 93.9%+6%=99.9% que dá pra arredondar para 100%.
+
+*/
+/*.course {
+  /*color: white;*/
+  /*width: 31.3%;*/
+  /*margin: 1%;*/
+/*}*/
+
+.flexContainer:last-child {
+  margin-top: 2em;
+}
+
+ body {
+  margin: 0;
+  padding: 0;
+}
+
+ div {
+  height: 50px;
+  width: 50px;
+}
+
+ div:nth-child(1) {
+  background-color: red;
+  width: 50px;
+  height: 50px;
+}
+
+div:nth-child(2) {
+  background-color: blue;
+}
+
+ div:nth-child(3) {
+  background-color: green;
+}
+
+div:nth-child(4) {
+  background-color: yellow;
+}
+
+ div:nth-child(5) {
+  background-color: pink;
+}
+
+div:nth-child(6) {
+
+    background-color: black;
+}
+
+  div:nth-child(7) {
+    background-color: orange;
+  }
+    div:nth-child(8) {
+      background-color: silver;
+    }
+
+
+.flexContainer {
+  /*display: flex;*/
+  /*justify-content: space-between;*/
+  /*justify-content: space-around;*/
+  /*align-items: center;*/
+  /*flex-direction: column;*/
+  /*height: 300px;*/
+}
+
+.flexItem {
+  /* distribui o espeça entre os elementos */
+  flex-grow: 1;
+
+}
+
+.primeiro {
+  /* colocando 2 espaços para um elemento e deixando os outros com o resto */
+  flex-grow: 2;
+
+
+  /* já o flex-shrink: 1; faz o contrário do flex-grow que é diminuir um elemento mais que os outros; */
+  /*flex-shrink: 1;*/
+
+  /*  se colocar 
+  flex-shrink: 0; ele diz que ninguém vai diminuir de tamanho
+  
+  
+  */
+}
+
+
+/* para juntar o flex grow com o flex shrink usa:
+flex: 1(grow) 1(shrink) 
+
+o flex-basis: 25% tem mais prioridade em cima do width então pode ser útil em alguns casos. e pode ser colocado como terceiro argumento do flex
+
+flex: 1(flex-grow) 1(flex-shrink) 25%(flex-basis)
+
+A propriedade flex-basis serve para definir uma largura ou altura para o flex item. Se o flex container tiver com flex-direction: column,
+o flex-basis no flex item servirá para definir uma height. Caso o flex-direction: row,
+ele funciona como um width.
+*/
+
+
+/*
+exercício ---------------------
+*/
+
+.flexContainer {
+  display: flex;
+  width: 800px;
+}
+
+.flexItem {
+  width: 200px;
+}
+
+
+.flexItem:first-child {
+  flex-shrink: 3;
+}
