@@ -1,0 +1,24 @@
+.cabecalho {
+    align-items: center;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 0) {
+    .cabecalho {
+    
+        padding: 0 1rem;
+        justify-content: center;
+        /* fazendo a quebra do menu com a imagem em coluna */
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 768px) {
+    .cabecalho {
+        /* voltando a colocar a logo e o menu um d lado do outro */
+        flex-direction: row;
+        padding: 0 5rem;
+        justify-content: space-between;
+    }
+}

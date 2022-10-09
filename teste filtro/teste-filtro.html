@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>teste-filtro</title>
+
+  <style>
+
+    /* faz a mesma função que adiciona a classe active, mas nesse caso a alteração permanece */
+
+    p, input {
+      /* o p vai ser meu form e o input é o checkbox que eu quero esconder, é só colocar display: none no checkbox, e o icone como tá dentro do label vai ficar aparecendo */
+      display: none;
+    }
+
+
+    input:checked + .checkbox-wrapper {
+      color: blue
+    }
+
+    input:checked + .checkbox-wrapper p{
+      font-size: 2em;
+      display: block;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <input type="checkbox" name="" id="item-1">
+  
+  <!-- o que vai mudar quando clicar no input -->
+  <div class="checkbox-wrapper">
+    <!-- o label vai ativar quando clicar no checkbox.. -->
+    <label for="item-1">icon</label>
+    <!--  criando o que eu quero animar -->
+
+    <p>olá mundo olá mundoolá mundoolá mundoolá mundo</p>
+  </div>
+
+
+</body>
+</html>

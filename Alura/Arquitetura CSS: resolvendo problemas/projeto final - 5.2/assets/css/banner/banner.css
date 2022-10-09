@@ -1,0 +1,4 @@
+.banner {
+    position: relative;
+    /* colocar o position relative aqui faz com que os filhos dessa classe banner (que estão com o position absolute)fiquem relativos a esse elemento pai, ou seja, relativo a classe banner  */
+}

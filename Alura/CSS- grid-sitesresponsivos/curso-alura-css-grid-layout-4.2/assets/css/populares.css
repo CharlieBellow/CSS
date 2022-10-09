@@ -17,6 +17,12 @@
     grid-template-columns: 100%;
     grid-template-rows: 173px auto;
     margin-right: 1rem;
+    /* Realizamos a definição de cinco cards por linha,
+    dessa maneira,
+    precisamos calcular o tamanho do nosso card: 100% / 5=20%,
+    mas também adicionamos margin-right de 1rem para que,
+    entre um card e outro,
+    exista um espaçamento. */
     width: calc(20% - 1rem);
 }
 
@@ -53,6 +59,7 @@
 
 .populares__card___descricao {
     color: #333333;
+    /* espaçamento entre linhas */
     line-height: 1.5;
     margin: 1rem 0;
     text-align: justify;

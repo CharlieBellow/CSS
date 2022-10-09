@@ -3,6 +3,7 @@
     padding: .5rem 1rem;
 }
 
+/*essa definição diz que quando o elemento estiver com o mouse em cima e com a classe .ativo vai executa esse codigo*/
 .menu__link:hover, .menu__link.ativo {
     border-bottom: 2px solid #0073e6;
     /* cria uma borda azul embaixo do menu quando passa o mouse */

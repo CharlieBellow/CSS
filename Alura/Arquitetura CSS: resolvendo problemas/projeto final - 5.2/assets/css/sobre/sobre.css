@@ -1,0 +1,17 @@
+/* estilizar dessa forma faz com que a gente tenha todos os estilos dos elementos e como ele aparece em todas os tipos de telas */
+
+
+.sobre {
+    text-align: center;
+}
+
+@media screen and (min-width: 0) {
+    .sobre {
+        padding: 2.5rem 1rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .sobre {
+        padding: 2.5rem;
+    }
+}

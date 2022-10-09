@@ -1,0 +1,15 @@
+.header__user-content .user-nav__icon-nav:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    /* -webkit-transition: all .3s; */
+    transition: all .3s;
+    right: 0;
+
+
+.header__user-content .user-nav--authenticated:hover .user-nav__icon-nav:before {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+
+<i class="user-nav__icon-nav"></i>::before
