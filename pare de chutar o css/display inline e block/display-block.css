@@ -1,0 +1,36 @@
+.exemple {
+  color: #fff;
+  /* no display block os filhos do elemento sofrem a ação, então alguns estilos precisam ser colocados no pai deles */
+  text-align: center;
+}
+
+.exemple-item {
+  /* por padrão a tag li já vem com display: block; e o block permite definir largura e altura */
+  
+  /*display: block */
+  width: 33.333%;
+  height: 150px;
+}
+
+.exemple-item_first {
+  background-color: #faa116;
+}
+.exemple-item_second {
+  background-color: #57c7c3;
+  /* a propriedade auto no display block faz com que o elemento ocupe a linha (width) toda, então não dá pra colocar dois elementos na mesma linha. por isso o auto aqui pega toda a linha, tinha a largura do elemento e aplica o resto que sobra como margin, assim, mesmo mudando a largura do elemento, sempre vai ficar bem alinhado à direita (nesse caso) */
+  margin-left: auto;
+  /* obs: não esqueça de definir uma largura antes de aplicar margem. se não o elemento vai continuar ocupando a tela toda */
+}
+
+.exemple-item_third {
+  background-color: #3b97d3;
+  
+  /* para centralizar o elemento, é só aplicar margin auto ou aplicar margin na esquerda e na direita para ele funcionar */
+  /*margin: 0 auto*/
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+

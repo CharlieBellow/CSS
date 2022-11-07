@@ -1,0 +1,56 @@
+.elementExample {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+
+.elementExample_first {
+  background-color: #6c5ce7;
+/* o position absolute cria um novo contexto (camada) e deixa seu espaço vago, por isso os outro elementos que estão abaixo ficm em cima dele */
+  position: absolute;
+  
+  /* o position absolute usa como referencia a tela, então se colocar right: 0 a margin-right dele vai ser 0 */
+  right: 0;
+  /*opacity: 0;*/
+}
+
+.elementExample_second {
+  background-color: #00b894;
+  position: absolute;
+  left: 50%;
+  /* como coloquei acima o elemento todo pra ocupar 50% da tela, tenho que fazer só a metade dele ficar com 50% para poder alinhar bem ao meio. nesse caso movi metade do elemento (-50%) para a esquerda usando um valor negativo */
+  transform: translateX(-50%);
+  /* alinhando no eixo Y */
+  top: 50%;
+  transform: translateY(-50%);
+  
+  
+  /*bottom: center;*/
+}
+
+.elementExample_last {
+  background-color: #d63031;  
+  
+  /*  para que o position absolute funcione respeitando o tamanho de seu elemento pai, o elemento pai não pode ter o position static (que é o padrão). nesse caso, adcionamos no elemento pai o position absolute também */
+  position: absolute;
+}
+
+.elementExample-internal {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background-color: #00cec9;  
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /* simplificando o código translate: (o primeiro valor é do eixo X o segundo é Y) */
+  transform: translate(-50%, -50%);
+  /*ou: transform: translateX(-50%) translateY(-50%);*/
+
+
+}

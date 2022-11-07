@@ -1,0 +1,29 @@
+.exemple {
+  color: #fff;
+  /* no display inline (comportamento de palavra) os filhos do elemento sofrem a ação, então alguns estilos precisam ser colocados no pai deles */
+  text-align: center;
+}
+
+.exemple-item {
+  /*width: 33.333%;*/
+  /*height: 150px;*/
+  /* display inline não permite que a a gente coloque largura e altura nos elementos. além disso, ele aiciona um espaço nas laterais dos elementos (ganha comportamento de uma palavra/texto) - então se tiver uma quebra de linha entre os elementos ele vai adicionar esse espaço entre os elementos. para manter a identação adiciona um comentário na quebra de linha */
+  display: inline;
+}
+
+.exemple-item_first {
+  background-color: #faa116;
+}
+.exemple-item_second {
+  background-color: #57c7c3;
+}
+.exemple-item_third {
+  background-color: #3b97d3;
+}
+
+h3 {
+  text-align: right;
+  /*background-color: violet;*/
+}
+
+

@@ -1,0 +1,41 @@
+.exemple {
+  color: #fff;
+  /* o display: inline-block recebe o comportamento de palavra mas pode ter propriedade de altura e largura. Quando aplica o justify os elementos se comportam como palavras e icam justificados, porém a última linha não é justificada */
+  text-align: justify;
+}
+
+/* cria um último elemento na tela para que ele seja um elemento vazio e que as linhas de cima possam ficar justificadas. é melhor adicionar no css para não fazer uma má prática no HTML */
+.exemple::after {
+  content: "";
+  /*color: black;*/
+  /*background-color: grey;*/
+  display: inline-block;
+  width: 100%;
+}
+
+.exemple-item {  
+  display: inline-block;
+  
+  width: 25%;
+  height: 150px;
+
+}
+
+.exemple-item_first {
+  background-color: #faa116;
+}
+.exemple-item_second {
+  background-color: #57c7c3;
+
+}
+
+.exemple-item_third {
+  background-color: #3b97d3;
+  
+}
+
+p { 
+  /* o justify justifica o texto para que ele ocupe toda a linha disponível. */
+  text-align: justify;
+}
+

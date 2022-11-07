@@ -1,0 +1,40 @@
+.elementExemple {
+  width: 200px;
+  height:200px;
+  /*centraliza o texto verticalmente dentro do elemento*/
+  line-height:200px;
+  color: #FFF;
+  /* coloca o texto em caixa alta */
+  text-transform: uppercase;
+  /* centraliza horiontalmente o texto dentro da caixa */
+  text-align: center;
+  /*opacity: 0;*/
+}
+
+.elementExemple_first {
+  background-color: #8e44ad;
+
+  float: right;
+  /* o float nunca esconte o conteúdo do elementos mesmo que o elemento tenha sido escondido. o conteúdo é exibido abaixo o elemento */
+  /*opacity: 0;*/
+
+}
+.elementExemple_last {
+  background-color: #c0392b;
+  /*color: red;*/
+  float: right; 
+}
+/* no float se  o espaço disponível no elemento pai for infuciente, ele quebra pra baixo e se mantém do lado que vc especificar */
+
+p {
+  /*background: yellow;*/
+  /* o clear verifica se tem algum elemento flutuando próximo a ele e se posiciona abaixo dele. serve para quando quero que o elemento que está flutando ocupe todo o espaço ali e a camada de fundo não invada o espaço do elemento float. então serve pra criar uma camada nova que não fique abaixo dos elementos que estão flutuando*/
+  clear: both;
+}
+
+/* embora o article esteja envolvendo as duas div e a tag p, o backgroud só fica no p. pq as duas divs estão flutuando e fora do contexto (fora da primeira camada) */
+article {
+  background-color: violet;
+  /* verifica se tem alguma div dentro de elemento que está flutuando e faz com que elas vontem pra o contexto (recupera a largura e altura do elemento) */
+  overflow: hidden;
+}

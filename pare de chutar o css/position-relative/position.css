@@ -1,0 +1,33 @@
+.elementExample {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+.elementExample_first {
+  background-color: #8E44AD;
+  /* por padrão o position é static, que impede os elementos de se moverem */
+  position: relative;
+  /* no position relative pode-se usar top left right e bottom. essas posições levam em conta o lugar onde ele foi criado e move na direção contraria (é como se fosse um margin) */
+  top: 200px;
+}
+
+/* obs: o position relative cria um contexto novo (camada) para o elemento mas não deixa vago o espaço que estava no contexto anterior. se tiver dois o nomesmo contexto, vai prevalecer o último criado (respeita a ordem do html, o último elemento vai ficar por cima) */
+
+.elementExample_last {
+  background-color: #C0392B;
+
+  
+  /*  adicionando o position relative pra ele mudar de lugar e respeitar o z-index */
+  position: relative;
+  
+}
+
+.elementExample_isActive {
+  /* o z-index muda a posição do elemento no eixo z, ou seja, diz quem vai ficar na frente de quem. zero é o padrão. mas se o elemento estiver com position static (que é o padrão), tem que colocar como relative */
+  z-index: 1;
+  
+}
