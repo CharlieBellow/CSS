@@ -1,0 +1,14 @@
+.btn {
+  /* se a variável é criada aqui, ela só vai estar disponível dentro desse escopo, ou seja, para o elemento em que ela foi criada e para os filhos dele */
+  --color-first: #990000;
+  --color-white: #fff;
+  width: 200px;
+  height: 50px;
+  line-height: 1em;
+  background-color: var(--color-first);
+  color: var(--color-white);
+  border: none;
+
+}
+
+
